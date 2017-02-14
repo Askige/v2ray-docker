@@ -33,7 +33,7 @@ chmod +x "/usr/bin/v2ray/v2ray"
 mkdir -p /etc/v2ray
 if [ ! -f "/etc/v2ray/config.json" ]; then
   # cp "/tmp/v2ray/v2ray-${VER}-linux-${VDIS}/vpoint_vmess_freedom.json" "/etc/v2ray/config.json"
-  wget -O /etc/v2ray/config.json $CFGLOC
+  curl  $CFGLOC > /etc/v2ray/config.json
 
 fi
 
