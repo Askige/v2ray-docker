@@ -3,15 +3,13 @@
 # Version: 1.3.0
 
 FROM ubuntu:14.04
-MAINTAINER fuyumi <280604399@qq.com>
+#MAINTAINER fuyumi <280604399@qq.com>
+#Inspired by fuyumi
+MAINTAINER Shelikhoo <xiaokangwang@outlook.com>
 
 # environment
-ENV V2RAY_VERSION 1.10
-ENV V2RAY_PORT 9527
-ENV V2RAY_ALTERID 7259
-ENV SS_PORT 443
-ENV SS_PASSWD !~v2foobar~!
-ENV SS_METHOD chacha20
+ENV V2RAY_VERSION 2.18
+ENV V2RAY_PORT 9021
 
 # install git & curl & unzip & daemon
 RUN apt-get -qq update && \
@@ -24,6 +22,5 @@ ADD config.json /usr/v2ray/config.json
 RUN chmod +x /usr/v2ray/install-release.sh
 
 EXPOSE $V2RAY_PORT
-EXPOSE $SS_PORT
 
 CMD ["bash", "/usr/v2ray/install-release.sh"]
