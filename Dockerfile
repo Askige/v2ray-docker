@@ -13,7 +13,7 @@ ENV V2RAY_PORT 9021
 
 # install git & curl & unzip & daemon
 RUN apt-get -qq update && \
-    apt-get install -q -y git curl unzip daemon
+    apt-get install -q -y git curl unzip daemon ntp
 
 # run install script
 RUN mkdir -p /usr/v2ray/

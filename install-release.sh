@@ -29,6 +29,9 @@ mkdir -p /usr/bin/v2ray
 cp "/tmp/v2ray/v2ray-${VER}-linux-${VDIS}/v2ray" "/usr/bin/v2ray/v2ray"
 chmod +x "/usr/bin/v2ray/v2ray"
 
+
+service ntp start
+
 # Install V2Ray server config to /etc/v2ray
 mkdir -p /etc/v2ray
 if [ ! -f "/etc/v2ray/config.json" ]; then
